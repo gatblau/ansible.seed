@@ -1,0 +1,16 @@
+---
+- name: Stopping the '{{target}}' container
+  docker:
+    name: "{{target}}"
+    image: "{{image}}"
+    state: stopped
+
+- name: Reading the Id of the '{{target}}' container
+  command: 'docker ps -l -q'
+  register: container_id
+
+- name: Committing the '{{target}}' container to a new image
+  command: 'docker commit -m \"{{target}}\" -a \"{{author}}\" {{container_id.stdout}} {{repository}}/{{target}}:{{version}}'
+
+- name: Deleting the '{{target}}' container
+  command: 'docker rm \"{{target}}\"'

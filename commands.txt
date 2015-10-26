@@ -1,0 +1,22 @@
+How to create and  run a container:
+----------------------------------
+docker run --name container_name -d image command
+
+for example:
+- mariadb: docker run --name mariadb -d -p 3306:3306 gatblau/mariadb:1.0 /usr/bin/mysqld_safe
+
+How to create and run a privileged contained (with systemd - VM emulation):
+--------------------------------------------------------------------------
+docker run --name container_name -d --privileged image command
+
+NOTE: image should have systemd
+
+for example:
+- mariadb: docker run --name mariadb -d --privileged -p 3306:3306 gatblau/mariadb:1.0 /usr/bin/mysqld_safe
+
+How to bash into a running container:
+------------------------------------
+docker exec -i -t container_name bash
+
+for example:
+- mariadb: docker exec -i -t mariadb bash

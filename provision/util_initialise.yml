@@ -1,0 +1,14 @@
+---
+- name: Starting up the '{{target}}' container
+  docker:
+    image: "{{image}}"
+    name: "{{target}}"
+    pull: missing
+    detach: yes
+    tty: yes
+    expose: "{{expose}}"
+    command: sleep infinity
+    state: started
+
+- name: Adding the '{{target}}' host to the inventory
+  add_host: name="{{target}}"
