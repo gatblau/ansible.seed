@@ -1,3 +1,8 @@
+#
+# CentOS 7 with systemd
+# builds a docker image which replaces the fake systemd in the centos base image with the real systemd
+# Use for emulating Virtual machines running CentOS 7 or RHEL 7 for testing playbooks.
+#
 FROM centos:centos7
 MAINTAINER "gatblau" <admin@gatblau.org>
 ENV container docker

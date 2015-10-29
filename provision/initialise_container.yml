@@ -13,6 +13,7 @@
 # limitations under the License.
 #
 # Spins up a docker container and adds it to the inventory.
+# This play is called from the target_host_n.yml playbook.
 #
 ---
 - name: Starting up the '{{target}}' container
