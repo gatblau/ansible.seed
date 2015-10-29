@@ -47,7 +47,7 @@ For each host:
 4. Commit the container to a new image
 5. Delete the container
 
-The new image can be used to create containers to inspect the state of the installation by runing the bash shell within the container.
+The new image can be used to create containers to inspect the state of the installation by running the bash shell within the container.
 
 
 ### Creating complex docker images
