@@ -29,7 +29,7 @@ It contains a list of [hosts](./provision/target_host1.yml) to be provisioned.
 - [target_host_n.yml](./provision/target_host1.yml): the playbook that provisions a set of [roles](./provision/roles) into a specific host container. The provided *target_host_n* files are offered as a template and example. They can be changed to suit the project requirements. See the comments section at the top of the files.
 - [initialise_container](./provision/initialise_container.yml): a play to spin up a docker container to be used as a host for provisioning. Called by [target_host_n.yml](./provision/target_host1.yml).
 - [terminate_container](./provision/terminate_container.yml): a play to stop, commit and delete a docker container. Called by [target_host_n.yml](./provision/target_host1.yml).
-- [roles](./provision/roles): a folder containing the roles can can be provisioned to one or more hosts. This folder can also contain [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) to roles is a central library that can be reused across projects. An example of such library is [Neus](www.github.com/gatblau/neus). 
+- [roles](./provision/roles): a folder containing the roles can can be provisioned to one or more hosts. This folder can also contain [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) to roles is a central library that can be reused across projects. An example of such library is [Neus](../neus). 
 
 The result of the process is well tested deployment playbooks that can be run on a number of different topologies and target hosts.
 

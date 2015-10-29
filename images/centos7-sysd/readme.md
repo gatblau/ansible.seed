@@ -42,7 +42,7 @@ A container can now be run in privileged mode, for example, by running the follo
 
 where:
 - **container_image**: the name of the docker image to use.
-- **container_name**": the tag of the created container.
+- **container_name**: the tag of the created container.
 - **container_port**: the port exposed by the image.
 - **container_image_version**: the version of the image to use.
 - **host_port**: the port mapped on the host.
